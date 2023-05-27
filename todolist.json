@@ -1,0 +1,61 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Todolist RESTful API",
+    "version": "1",
+    "description": "OpenAPI for Todolist RESTful API",
+    "termsOfService": "https://www.programmerzamannow.com",
+    "contact": {
+      "name": "yulianto",
+      "email": "yulianto@gmail.com",
+      "url": "https://www.programmerzamannow.com"
+    },
+    "license": {
+      "name": "APACHE 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "servers": [
+    {
+      "description": "Todolist RESTful API Server",
+      "url": "https://{environment}.programmerzamannow.com/api/v1",
+      "variabels": {
+        "environment": {
+          "description": "Server Environment",
+          "default": "dev",
+          "enum": ["dev", "qa", "prod"]
+        }
+      }
+    }
+  ],
+  "externalDocs": {
+    "description": "Youtube",
+    "url": "https://www.youtube.com"
+  },
+  "path": {
+    "/Todolist": {
+      "get": {
+        "summary": "Get new todolist",
+        "description": "Get all active todolist by default",
+        "response": {}
+      },
+      "post": {
+        "summary": "Create new todolist",
+        "description": "create new todolist in database",
+        "response": {}
+      },
+      "/Todolist/{todolist}": {
+        "put": {
+          "summary": "update existing todolist",
+          "description": "update existing todolist in database",
+          "response": {}
+        },
+        "delete": {
+          "summary": "delete existing todolist",
+          "description": "delete existing todolist in database",
+          "response": {}
+        }
+      }
+    }
+  }
+}
